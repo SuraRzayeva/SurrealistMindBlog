@@ -5,17 +5,19 @@ export const StyledSocialMedia = Styled.div`
 position: absolute;
 right: 100px;
 top: 30%;
+z-index: 1000;
 
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
+    z-index: 100;
 
     li {
         margin-bottom: 20px;
         font-size: 13px;
-        cursor: pointer;
         transition: .3s ease all;
     }
 

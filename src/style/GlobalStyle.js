@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const Colors = {
+  black: '#363636',
+}
+
 export const GlobalStyle = createGlobalStyle`
 
 * {

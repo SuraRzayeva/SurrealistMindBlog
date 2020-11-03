@@ -5,44 +5,38 @@ const SocialMedia = () => {
   const [top, setTop] = useState()
 
   const setCoordinate = (e) => {
-    if (window.innerHeight === 800) {
-      if (e.clientY > 340) {
+    console.log(window.innerHeight)
+
+    if (window.innerHeight < 900) {
+      console.log(e.clientY)
+      if (e.clientY > 270) {
         setTop('77%')
-      } else if (e.clientY > 300) {
+      } else if (e.clientY > 233) {
         setTop('53%')
-      } else if (e.clientY > 270) {
-        setTop('27%')
-      } else if (e.clientY > 230) {
-        setTop('3%')
-      }
-    } else if (window.innerHeight < 900) {
-      if (e.clientY > 372) {
-        setTop('77%')
-      } else if (e.clientY > 340) {
-        setTop('53%')
-      } else if (e.clientY > 300) {
-        setTop('27%')
       } else if (e.clientY > 200) {
+        setTop('27%')
+      } else if (e.clientY > 166) {
         setTop('3%')
       }
     } else if (window.innerHeight === 900) {
-      if (e.clientY > 372) {
+      console.log(e.clientY)
+      if (e.clientY > 306) {
         setTop('77%')
-      } else if (e.clientY > 340) {
+      } else if (e.clientY > 265) {
         setTop('53%')
-      } else if (e.clientY > 300) {
+      } else if (e.clientY > 230) {
         setTop('27%')
-      } else if (e.clientY > 200) {
+      } else if (e.clientY > 196) {
         setTop('3%')
       }
     } else if (window.innerHeight > 900) {
-      if (e.clientY > 372) {
+      if (e.clientY > 306) {
         setTop('77%')
-      } else if (e.clientY > 340) {
+      } else if (e.clientY > 265) {
         setTop('53%')
-      } else if (e.clientY > 300) {
+      } else if (e.clientY > 230) {
         setTop('27%')
-      } else if (e.clientY > 200) {
+      } else if (e.clientY > 196) {
         setTop('3%')
       }
     }
