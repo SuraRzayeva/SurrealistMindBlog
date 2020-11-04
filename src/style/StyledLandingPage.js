@@ -6,6 +6,7 @@ export const StyledLandingPage = Styled.div`
 
 min-height: 100vh;
 position: relative;
+transition: .5s ease all;
 
 .hero {
     position: absolute;
@@ -46,5 +47,24 @@ position: relative;
     background-size: cover;
     background-position: center;
     opacity: 0.8;
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
 }
 `

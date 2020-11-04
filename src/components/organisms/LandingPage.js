@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { StyledLandingPage } from '../../style/StyledLandingPage'
 import SocialMedia from '../molecules/SocialMedia'
 import Beach from '../../assets/images/beach.jpg'
@@ -6,10 +6,28 @@ import Wave from '../../assets/images/waves.jpg'
 import Falling from '../../assets/images/falling.jpg'
 import ScrollDown from '../atoms/ScrollDown'
 import Parallax from 'react-rellax'
+import Context from '../../context/Context'
+import { Helmet } from 'react-helmet'
+import DispatchContext from '../../context/DispatchContext'
 
 const LandingPage = () => {
+  const { blogActive, transition } = useContext(Context)
+  const { setAboutActive, setHomeActive, setBlogActive, setContactActive } = useContext(DispatchContext)
+
+  useEffect(() => {
+    setHomeActive(true)
+    setBlogActive(false)
+    setAboutActive(false)
+    setContactActive(false)
+  }, [])
+
   return (
-    <StyledLandingPage>
+    <StyledLandingPage blogActive={blogActive} transition={transition}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Surrealist Mind Blog</title>
+        <link rel="canonical" href="http://surrealistmind.com" />
+      </Helmet>
       <SocialMedia />
       <div className="hero">
         <Parallax speed={8}>

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StyledBlogSection } from '../../style/StyledBlogSection'
 import Parallax from 'react-rellax'
+import Context from '../../context/Context'
 
 const BlogSection = () => {
+  const { blogActive } = useContext(Context)
+
   return (
-    <StyledBlogSection>
+    <StyledBlogSection blogActive={blogActive}>
       <Parallax speed={5}>
         <div className="title">
           <p>Selected Blog Posts</p>

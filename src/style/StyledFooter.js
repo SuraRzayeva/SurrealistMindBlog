@@ -23,6 +23,13 @@ display: flex;
            margin-right: 10px;
            color: white;
            font-weight: 500;
+           border-bottom: 1px transparent solid;
+           transition: .5s ease all;
+           cursor: pointer;
+       }
+
+       li:hover {
+           border-bottom: 1px violet solid;
        }
    }
 
