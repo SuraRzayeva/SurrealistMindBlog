@@ -8,7 +8,6 @@ width: 100%;
 height: 80px;
 display: flex;
 position: fixed;
-transition: .5s ease all;
 z-index: 5000;
 
 ul {
@@ -18,7 +17,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding-right: 100px;
-    color: ${Colors.black};
+    color: ${(props) => (!props.aboutActive ? Colors.black : 'white')};
     cursor: pointer;
 }
 
@@ -27,11 +26,22 @@ ul {
     display: flex;
     align-items: center;
     padding-left: 100px;
-    color: ${Colors.black};
+}
+
+a {
+    text-decoration: none;
+    color: ${(props) => (!props.aboutActive ? Colors.black : 'white')};
+    border-bottom: 2px solid transparent;
+    transition: .5s ease all;
+}
+
+a:hover {
+    border-bottom: 2px violet solid;
+    transition: .5s ease all;
 }
 
 :hover {
-    background: white;
+    background: ${(props) => (props.aboutActive ? Colors.black : 'white')};
 }
 
 `

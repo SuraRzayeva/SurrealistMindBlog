@@ -1,6 +1,8 @@
 import Styled from 'styled-components'
 import { Colors } from './GlobalStyle'
 import Waves from '../assets/images/waves.jpg'
+import Silence from '../assets/images/silence.jpg'
+import Freedom from '../assets/images/freedom.jpg'
 
 export const StyledBlogSection = Styled.div`
 
@@ -77,20 +79,24 @@ position: relative;
     cursor: pointer;
     background-size: cover;
     opacity: .8;
+    
+  
 }
 
 .image1 {
     top: 7%;
     right: 0;
-    background: url(${Waves}) no-repeat;
-
+    background: url(${Silence}) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .image2 {
     top: 27%;
     left: 0;
-    background: url(${Waves}) no-repeat;
-
+    background: url(${Freedom}) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -98,6 +104,8 @@ position: relative;
     top: 45%;
     right: 0;
     background: url(${Waves}) no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }
 

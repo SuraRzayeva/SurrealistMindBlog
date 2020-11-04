@@ -4,12 +4,14 @@ import Parallax from 'react-rellax'
 import Context from '../../context/Context'
 import { Helmet } from 'react-helmet'
 import DispatchContext from '../../context/DispatchContext'
+import { Link } from 'react-router-dom'
 
 const AllBlogPosts = () => {
   const { blogActive } = useContext(Context)
-  const { setBlogActive, setHomeActive, setAboutActive, setContactActive } = useContext(DispatchContext)
+  const { setBlogActive, setHomeActive, setAboutActive, setContactActive, setSingleBlogActive } = useContext(DispatchContext)
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     setBlogActive(true)
     setHomeActive(false)
     setContactActive(false)
@@ -33,16 +35,26 @@ const AllBlogPosts = () => {
         </div>
 
         <div className="quote-div">
-          <p>We are the children of chaos...</p>
-          <p>because order is intimidating.</p>
-          <p>We are loud...</p>
-          <p>...because silence is scary.</p>
+          <Parallax speed={6}>
+            <p>We are the children of chaos...</p>
+          </Parallax>
+          <Parallax speed={5}>
+            <p>because order is intimidating.</p>
+          </Parallax>
+          <Parallax speed={4}>
+            <p>We are loud...</p>
+          </Parallax>
+          <Parallax speed={3}>
+            <p>...because silence is scary.</p>
+          </Parallax>
         </div>
 
         <div className="blog-title">
           <Parallax speed={-2} className="image-div imageRight image1"></Parallax>
           <p className="date">2020, September 2</p>
-          <p> We are too Loud</p>
+          <Link to="/BlogPosts/1">
+            <p> We are too Loud</p>
+          </Link>
         </div>
 
         <div className="lineDiv lineDiv2">

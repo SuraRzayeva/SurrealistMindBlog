@@ -9,7 +9,7 @@ const Navbar = () => {
   const { blogActive, aboutActive, homeActive, contactActive } = useContext(Context)
 
   return (
-    <StyledNavbar>
+    <StyledNavbar aboutActive={aboutActive}>
       <div className="logo">
         <Link to="/">
           <p>Surrealist Mind</p>

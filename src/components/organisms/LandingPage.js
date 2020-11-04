@@ -15,6 +15,7 @@ const LandingPage = () => {
   const { setAboutActive, setHomeActive, setBlogActive, setContactActive } = useContext(DispatchContext)
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     setHomeActive(true)
     setBlogActive(false)
     setAboutActive(false)

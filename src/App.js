@@ -11,10 +11,10 @@ import AllBlogPosts from './components/organisms/AllBlogPosts'
 import AboutMe from './components/organisms/AboutMe'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Contact from './components/organisms/Contact'
+import SingleBlog from './components/organisms/SingleBlog'
 
 function App() {
   const [blogActive, setBlogActive] = useState(false)
-
   const [aboutActive, setAboutActive] = useState(false)
   const [homeActive, setHomeActive] = useState(false)
   const [contactActive, setContactActive] = useState(false)
@@ -33,6 +33,9 @@ function App() {
             <Route path="/BlogPosts" exact>
               <AllBlogPosts />
             </Route>
+            <Route path="/BlogPosts/:id" exact>
+              <SingleBlog />
+            </Route>
             <Route path="/AboutMe" exact>
               <AboutMe />
             </Route>
@@ -43,7 +46,7 @@ function App() {
           <Footer />
         </Router>
 
-        <GlobalStyle />
+        <GlobalStyle aboutActive={aboutActive} />
       </DispatchContext.Provider>
     </Context.Provider>
   )

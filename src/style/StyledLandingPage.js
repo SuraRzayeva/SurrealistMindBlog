@@ -7,6 +7,7 @@ export const StyledLandingPage = Styled.div`
 min-height: 100vh;
 position: relative;
 transition: .5s ease all;
+animation: appear 3s 1 ease forwards;
 
 .hero {
     position: absolute;
@@ -34,7 +35,7 @@ transition: .5s ease all;
     background: url(${YellowStroke}) no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.8;
+
 }
 
 .image-2 {
@@ -46,7 +47,7 @@ transition: .5s ease all;
     background: url(${Hands}) no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.8;
+
 }
 
 

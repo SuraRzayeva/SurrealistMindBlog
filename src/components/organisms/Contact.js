@@ -12,7 +12,7 @@ const Contact = () => {
     setContactActive(true)
     setBlogActive(false)
     setAboutActive(false)
-    setBlogActive(false)
+    setHomeActive(false)
   }, [])
 
   return (

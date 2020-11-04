@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const Colors = {
-  black: '#363636',
+  black: '#111',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -19,5 +19,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    background: ${(props) => (props.aboutActive ? Colors.black : 'white')};
 }
 `
